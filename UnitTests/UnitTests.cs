@@ -17,7 +17,7 @@ namespace UnitTests
             var b = new MatchingBrackets();
 
             // Act
-            bool result = b.HasMatchingBrackets(s);
+            bool result = b.IsBalanced(s);
 
             // Assert
             Assert.Equal(expectedResult, result);

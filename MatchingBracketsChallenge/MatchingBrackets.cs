@@ -7,7 +7,7 @@ namespace MatchingBracketsChallenge
         private const char START_BRACKET = '<';
         private const char END_BRACKET = '>';
 
-        public bool HasMatchingBrackets(string s)
+        public bool IsBalanced(string s)
         {
             bool result = true;
             Stack<char> stack = new Stack<char>();
