@@ -1,4 +1,5 @@
 using MatchingBracketsChallenge;
+using Xunit;
 
 namespace UnitTests
 {
@@ -6,11 +7,11 @@ namespace UnitTests
     {
         [Theory]
         [InlineData("<>", true)]
-        [InlineData("<>", false)]
+        [InlineData("><", false)]
         [InlineData("<<>", false)]
         [InlineData("", true)]
         [InlineData("<abc...xyz>", true)]
-        public void Test1(string s, bool expectedResult)
+        public void GivenUnitTests(string s, bool expectedResult)
         {
             // Arrange
             var b = new MatchingBrackets();
@@ -19,7 +20,7 @@ namespace UnitTests
             bool result = b.HasMatchingBrackets(s);
 
             // Assert
-            Assert.Equal(result, expectedResult);
+            Assert.Equal(expectedResult, result);
         }
     }
 }
